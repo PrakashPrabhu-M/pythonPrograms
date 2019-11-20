@@ -12,3 +12,17 @@ for i in l:
 for i in l[::-1]:
   print(i.center(n))
 
+'''
+n=5
+l=[]
+for i in range(1,n+1):
+  print(1,end='')
+  for j in range(2,i+1):
+    print(j,end='')
+  print(1 if i!=1 else '')
+for i in range(n,0,-1):
+  print(1,end='')
+  for j in range(2,i+1):
+    print(j,end='')
+  print(1 if i!=1 else '')    
+'''
