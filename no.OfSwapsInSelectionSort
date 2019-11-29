@@ -1,0 +1,36 @@
+""" 
+
+You are head incharge of sports activity in queue. Your task is to sort the students height wise in line. But you can only swap students.Your task is to determine the minimum possible swaps required to sort the students in queue according to heights
+
+Input Description:
+You are given with number ‘n’ denoting number of students. Next line contains n space separated integers denoting their height.
+
+Output Description:
+Print the minimum number of swaps required to sort the students in line.
+
+Sample Input :
+5
+1 5 4 3 2
+
+Sample Output :
+2
+ """
+
+#https://www.geeksforgeeks.org/minimum-number-swaps-required-sort-array/ for accurate solution of this question
+
+def sort(ar):
+  s=0
+  for i in range(len(ar)):
+    minpos=i
+    for j in range(i+1,len(ar)):
+      if ar[minpos]>ar[j]:
+        minpos=j
+    if minpos!=i:
+      s+=1
+      ar[minpos],ar[i]=ar[i],ar[minpos]
+  return s
+
+input()
+a=list(map(int,input().split()))
+n=sort(a)
+print(n)
