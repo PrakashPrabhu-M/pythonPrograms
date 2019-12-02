@@ -1,5 +1,7 @@
 '''
-You are given a number ‘n’. You have to tell whether a number is great or not. A great number is a number whose sum of digits let (m) and product of digits let(j) when summed together gives the number back
+You are given a number ‘n’. You have to tell whether a number is great or not. 
+A great number is a number whose sum of digits let (m) and product of digits let(j) when summed together gives 
+the number back
 
 m+j=n
 
@@ -35,3 +37,20 @@ def ch(x):
     return True
   return False
 print('Great' if ch(n) else "no")
+
+'''
+n=int(input())
+s=sum([int(x) for x in str(n)])
+def pro(ar):
+    product=1
+    ct=len(ar)
+    while ct:
+        product*=int(ar[ct-1])
+        ct-=1
+    return product
+p=pro(str(n))
+if p+s==n:
+    print('Great')
+else:
+    print("no")
+'''
